@@ -1,6 +1,7 @@
 import{GraphQLServer} from 'graphql-yoga';
-
+import resolvers from './graphql/resolvers'
 const server = new GraphQLServer({
-    //to be implemented
+    typeDefs:'graphql/scheme.graphql',
+    resolvers
 });
 server.start(()=>{console.log("Graphql Server start!!")});
